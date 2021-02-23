@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px; /* 1rem= 16px */
+}
+
+/*********PC, TABLET *************/
+
+@media (min-width: 768px) {
+  body {
+    background-image: url();
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head '
+      'form'
+      'ft';
+  }
+  header {
+    grid-area: head;
+    height: 100px;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    display: grid;
+    grid-template-areas: 'lg  menu bandera';
+  }
+  .respmenu input[type='checkbox'],
+  .respmenu .fa-bars,div.respmenu,
+  .respmenu .fa-times {
+    visibility: hidden;
+    opacity: 0;
+  }
+  div#logo {
+    grid-area: lg;
+    align-content: center;
+  }
+  div#logo img {
+    height: 125px;
+    padding: 5px;
+  }
+
+  nav#menu {
+    grid-area: menu;
+    position: relative;
+  }
+  nav#menu li {
+    position: relative;
+    top: 48px;
+    margin: 10px;
+    left: 10px;
+
+    padding-top: 12px;
+    padding-bottom: 30px;
+    vertical-align: text-bottom;
+  }
+  nav#menu li a {
+    font-size: 1.1rem;
+  }
+  div#banderas {
+    grid-area: bandera;
+    position: relative;
+  }
+  div#banderas img {
+    position: relative;
+    top: 73px;
+    left: 30px;
+    margin: 3px;
+  }
+  div#form {
+    grid-area: form;
+    grid-template-columns: 1fr;
+  }
+  form {
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #ccc;
+    background-image: url(/fotosduneskitepiles/DSC_0103.JPG);
+  }
+
+  form label {
+    width: 72px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  form label#veces{
+    display: inline;
+  }
+
+  form input[type='text'],
+  form input[type='email'] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+  }
+
+  form input[type='submit'],
+  form input[type='reset'] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+  }
+
+  form input[type='submit']:hover,
+  form input[type='reset']:hover {
+    cursor: pointer;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    /*resize: vertical | horizontal | none | both*/
+    resize: none;
+    display: block;
+  }
+  /**********PREGUNTAS FRECUENTES*******/
+  .lista {
+    background: white;
+    max-width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    list-style: none;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .pregunta {
+    padding: 11px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .pregunta i {
+    font-size: 21px;
+    transition: 0.3s;
+  }
+  .pregunta span {
+    transition: 0.3s;
+  }
+  .pregunta:hover span {
+    margin-left: 15px;
+  }
+  .pregunta:last-child {
+    border: none;
+  }
+  
+  .respuesta {
+    text-align: justify;
+    background: #f3f3f3;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 0 16px;
+  }
+  /* Estilos para una pregunta seleccionada */
+  .resp_act {
+    padding-top: 2px;
+    font-size: 18px;
+    background-color: #10a7c1;
+    color: white;
+    border-bottom: 1px solid lightgrey;
+  }
+ 
+  .ico_resp_act {
+    transform: rotate(180deg);
+  }
+  h3 {
+    margin-top: 2%;
+    margin-left: 12%;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    grid-area: ft;
+    height: 80px;
+    width: 100%;
+    margin: 15px;
+  }
+}
+@media (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  :root {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+  }
+  body {
+    padding: 0.4rem;
+    margin: 0 auto;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head '
+      'form'
+      'ft';
+  }
+  header {
+    grid-area: head;
+    height: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas: 'menu lg bandera';
+  }
+  nav#menu {
+    visibility: hidden;
+  }
+  div.respmenu {
+    grid-area: menu;
+    z-index: 100;
+    height: 75px;
+    width: 140px;
+  }
+
+  div#logo {
+    grid-area: lg;
+    margin-bottom: 50px;
+    margin-right: 20%;
+    position: relative;
+  }
+  div#banderas {
+    grid-area: bandera;
+    position: relative;
+  }
+  div#banderas img {
+    height: 25px;
+    position: relative;
+    top: 10%;
+    left: 15%;
+  }
+  
+
+  div#logo img {
+    display: block;
+    position: relative;
+    right: 10%;
+    height: 100px;
+    
+  }
+  div#form {
+    grid-area: form;
+    grid-template-columns: 1fr;
+  }
+  form {
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    
+    background-color: #ccc;
+    background-image: url(/Codigo/img/fotosduneskitepiles/DSC_0061.JPG);
+  }
+
+  form label {
+    width: 72px;
+    font-weight: bold;
+    display: block;
+  }
+  form label#veces{
+    display: inline;
+  }
+
+  form input[type='text'],
+  form input[type='email'] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+  }
+
+  form input[type='submit'],
+  form input[type='reset'] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+  }
+  .lista {
+    background: white;
+    max-width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    list-style: none;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .pregunta {
+    padding: 11px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+  }
+  .pregunta i {
+    font-size: 21px;
+    transition: 0.3s;
+  }
+  .pregunta span {
+    transition: 0.3s;
+  }
+  .pregunta:hover span {
+    margin-left: 15px;
+  }
+  .pregunta:last-child {
+    border: none;
+  }
+  .respuesta {
+    text-align: justify;
+    background: #f3f3f3;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 0 16px;
+  }
+  /* Estilos para una pregunta seleccionada */
+  .resp_act {
+    padding-top: 2px;
+    padding-bottom: 17px;
+    font-size: 18px;
+    background-color: #10a7c1;
+    color: white;
+    border-bottom: 1px solid lightgrey;
+  }
+  .ico_resp_act {
+    transform: rotate(180deg);
+  }
+  h3{
+    padding: 10px;
+  }
+  
+
+  footer a svg {
+    margin: 30px;
+    width: 60px;
+    height: 40px;
+  }
+  div#copyright p {
+    font-size: 1.2rem;
+  }
+}

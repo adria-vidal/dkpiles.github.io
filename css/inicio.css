@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px; /* 1rem= 16px */
+}
+
+/*********PC, TABLET *************/
+
+@media (min-width: 768px) {
+  body {
+    background-image: url();
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head'
+      'est'
+      'cam'
+      'ft';
+  }
+  header {
+    grid-area: head;
+    height: 100px;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    display: grid;
+    grid-template-areas: 'lg  menu bandera';
+  }
+  .respmenu input[type='checkbox'],
+  .respmenu .fa-bars,div.respmenu,
+  .respmenu .fa-times {
+    visibility: hidden;
+    opacity: 0;
+  }
+  div#logo {
+    grid-area: lg;
+    align-content: center;
+  }
+  div#logo img {
+    height: 125px;
+    padding: 5px;
+  }
+  div#imagenPrincipal {
+    position: relative;
+  }
+  div#imagenPrincipal p {
+    position: absolute;
+    top: 9.5rem;
+    left: 10rem;
+    color: white;
+    font-size: 2.5rem;
+  }
+  div#imagenPrincipal img {
+    width: 100%;
+    height: 350px;
+  }
+  nav#menu {
+    grid-area: menu;
+    position: relative;
+  }
+  nav#menu li {
+    position: relative;
+    top: 48px;
+    margin: 10px;
+    left: 10px;
+
+    padding-top: 12px;
+    padding-bottom: 30px;
+    vertical-align: text-bottom;
+  }
+  nav#menu li a {
+    font-size: 1.1rem;
+  }
+  div#banderas {
+    grid-area: bandera;
+    position: relative;
+  }
+  div#banderas img {
+    position: relative;
+    top: 73px;
+    left: 30px;
+    margin: 3px;
+  }
+
+  article {
+    grid-area: est;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'est1 est2';
+    display: grid;
+    grid-column-gap: 3px;
+  }
+  article section#windy {
+    grid-area: est1;
+    display: inline;
+    margin: 2.5px;
+  }
+  article section#local {
+    grid-area: est2;
+    display: inline;
+    margin: 2.5px;
+  }
+  iframe {
+    width: 100%;
+  }
+
+  a#camaras {
+    float: right;
+    
+  }
+  section#camaras {
+    height: 300;
+    grid-area: cam;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  section#camaras img {
+    height: 250px;
+    width: 475px;
+    display: block;
+  }
+  section#camaras p {
+    background-color: black;
+    color: aliceblue;
+    transition: transform 0.2s;
+    width: 475px;
+    text-align: center;
+    font-family: 'Reggae One', cursive;
+  }
+  section#camaras p:hover {
+    transform: scale(1.5);
+  }
+  section#camaras p#p1 {
+    position: absolute;
+  }
+  section#camaras p#p2 {
+    position: absolute;
+    left: 25%;
+  }
+  section#camaras p#p3 {
+    position: absolute;
+    left: 50%;
+  }
+  section#camaras p#p4 {
+    position: absolute;
+    left: 75%;
+  }
+
+  footer {
+    grid-area: ft;
+    background-color: antiquewhite;
+    height: 80px;
+    margin: 4px;
+  }
+  footer section {
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+  }
+  footer section p {
+    position: absolute;
+    left: 650px;
+    top: 100px;
+    font-size: 2rem;
+    font-family: 'Reggae One', cursive;
+  }
+}
+
+/***** MOVIL *****/
+@media (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  :root {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+  }
+  body {
+    padding: 0.4rem;
+    margin: 0 auto;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head'
+      'imgprincipal'
+      'est'
+      'cam'
+      'ft';
+  }
+  header {
+    grid-area: head;
+    height: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas: 'menu lg bandera';
+  }
+  nav#menu {
+    visibility: hidden;
+  }
+  div.respmenu {
+    grid-area: menu;
+    z-index: 100;
+    height: 75px;
+    width: 140px;
+  }
+
+  div#logo {
+    grid-area: lg;
+    margin-bottom: 50px;
+    margin-right: 20%;
+    position: relative;
+  }
+  div#banderas {
+    grid-area: bandera;
+    position: relative;
+  }
+  div#banderas img {
+    height: 25px;
+    position: relative;
+    top: 10%;
+    left: 15%;
+  }
+
+  div#logo img {
+    display: block;
+    margin: auto;
+    height: 100px;
+  }
+  div#imagenPrincipal img {
+    width: 100%;
+    height: 175px;
+  }
+  div#imagenPrincipal {
+    grid-area: imgprincipal;
+    position: relative;
+  }
+  div#imagenPrincipal p {
+    position: absolute;
+    top: 4.2rem;
+    left: 3.8rem;
+    color: white;
+    font-size: 1.6rem;
+  }
+
+  main article {
+    grid-area: est;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'windy'
+      'local';
+  }
+  main article section#windy {
+    grid-area: windy;
+    width: 100%;
+  }
+  main article section#local iframe {
+    height: 230px;
+    width: 100%;
+  }
+  main article section#local {
+    grid-area: local;
+  }
+  article section a {
+    font-size: 1.5rem;
+    padding-bottom: 3.5rem;
+    margin-top: 1.5%;
+  }
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+  a#camaras {
+    float: right;
+
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  main p#directo {
+    padding-bottom: 3.5rem;
+    font-size: 1.5rem;
+    margin-top: 3.6%;
+  }
+  main section#camaras p {
+    margin-top: 2%;
+    font-size: 1.7rem;
+    padding: 3%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: 'Reggae One', cursive;
+  }
+  section#camaras img {
+    width: 100%;
+  }
+  footer section p {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-family: 'Reggae One', cursive;
+  }
+
+  footer a svg {
+    margin: 30px;
+    width: 60px;
+    height: 40px;
+  }
+  div#copyright p {
+    font-size: 1.2rem;
+  }
+}

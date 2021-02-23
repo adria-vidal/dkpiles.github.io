@@ -1,0 +1,73 @@
+nav ul li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+nav li,
+article section a,
+main > p,
+a#camaras {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid;
+  border-color: #318aac;
+  text-align: center;
+  color: #318aac !important;
+  transition: all 1s ease;
+  position: relative;
+}
+li#inicio {
+  background-color: #fff;
+  color: #10a7c1;
+}
+
+nav li:hover,
+article section a:hover,
+a#camaras:hover {
+  background: #318aac;
+  color: #fff !important;
+}
+
+nav li > ul {
+  display: none;
+}
+
+nav li:hover > ul {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+div.material a button {
+  color: #318aac !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid;
+  border-color: #318aac;
+  transition: all 1s ease;
+}
+div.material a button:hover {
+  background: #318aac;
+  color: #fff !important;
+}
+section#texto article p {
+  text-align: justify;
+  font-family: cursive;
+}
+section#texto article p strong {
+  font-weight: bold;
+  font-size: larger;
+}
+section#mapa p {
+  font-weight: bold;
+  font-size: larger;
+}
